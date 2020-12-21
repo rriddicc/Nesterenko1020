@@ -1,0 +1,63 @@
+
+<div class="container mt-3" *ngIf="items[0]">
+
+    <div class="row mb-4">
+
+
+        <select class="form-control col-3 mr-4" [(ngModel)]="sortParam">
+            <option value="priceUp">Price up</option>
+            <option value="priceDown">Price down</option>
+            <option value="stockUp">Stock up</option>
+            <option value="stockDown">Stock down</option>
+        </select>
+
+        <div class="col-3 ml-4 mr-4">
+
+            <label for="stock" >In stock</label>
+            <input type="checkbox" id="stock" class="ml-2" [(ngModel)]="stockParam">
+
+        </div>
+
+        
+        <select class="form-control col-3 ml-4" [(ngModel)]="filterParam">
+            <option value="phone">Phone</option>
+            <option value="book">Book</option>
+            <option value="technic">Technic</option>
+            <option value="mebel">Mebel</option>
+        </select>
+        
+
+        
+    </div>
+
+
+    <div class="row" *ngFor="let item of items
+    | sort : sortParam | filterStock : stockParam | filterCategory : filterParam
+    , let index = index" [ngClass]="{ 'second': index % 2 !== 0, 'first': index % 2 == 0 }">
+        
+        <div class="col-2">
+            {{ item.category }}
+        </div>
+        <div class="col-2">
+            {{ item.name }}
+        </div>
+        <div class="col-2">
+            {{ item.weight }}
+        </div>
+        <div class="col-2">
+            {{ item.price }}
+        </div>
+        <div class="col-2">
+            <button class="btn" (click)="onChangeCount(item.id, 'minus')">-</button>
+            {{ item.stock }}
+            <button class="btn" (click)="onChangeCount(item.id, 'plus')">+</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-warning" [routerLink]="['/edit', item.id]">Edit</button>
+        </div>
+
+    </div>
+
+
+
+</div>

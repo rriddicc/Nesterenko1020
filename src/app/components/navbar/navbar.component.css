@@ -1,0 +1,7 @@
+*{
+    color: white !important;
+}
+
+*.active{
+    color: rgb(235, 107, 107) !important;
+}

@@ -1,0 +1,11 @@
+.first{
+    background-color: aliceblue;
+}
+
+.second{
+    background-color: beige;
+}
+
+.first, .second{
+    padding: 10px 0px;
+}

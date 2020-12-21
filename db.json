@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "name": "Это первый никнейм",
+      "price": "232",
+      "weight": "111",
+      "stock": "9",
+      "madeBy": "Chine",
+      "article": "kuku",
+      "category": "mebel",
+      "id": 0
+    },
+    {
+      "name": "name1",
+      "price": "100",
+      "weight": "111",
+      "stock": 16,
+      "madeBy": "Chine",
+      "article": "ekefjwlfkjwlfk",
+      "category": "mebel",
+      "id": 1
+    },
+    {
+      "name": "name1",
+      "weight": "111",
+      "price": "200",
+      "stock": 10,
+      "article": "ekefjwlfkjwlfk",
+      "madeBy": "Chine",
+      "category": "technic",
+      "id": 2
+    }
+  ]
+}
